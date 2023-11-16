@@ -71,7 +71,7 @@ for i in range(params.num_nodes):
     if params.switch != "None":
         nodes[i].Desire(params.switch, 1.0)
 
-    nodes[i].addService(pg.Execute(shell="bash", command="/local/setup_ssh.sh"))
+    nodes[i].addService(pg.Execute(shell="bash", command="/local/repository/setup_ssh.sh"))
 
     if1 = nodes[i].addInterface("if1")
     #if2 = nodes[i].addInterface("if2")
